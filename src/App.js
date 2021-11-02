@@ -1,23 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Header from './pages/shared/Header/Header';
+import Footer from './pages/shared/Footer/Footer';
+import Home from './pages/Home/Home/Home';
+import AddTour from './pages/AddTour/AddTour';
+import Booking from './pages/Booking/Booking';
+import Login from './pages/Login/Login/Login';
+import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import UserDetails from './pages/UserDetails/UserDetails';
+import MyOrders from './pages/orderManagement/MyOrders/MyOrders';
+import ManageOrders from './pages/orderManagement/ManageOrders/ManageOrders';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+        <BrowserRouter>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
+            <PrivateRoute exact path="/add-tour">
+              <AddTour></AddTour>
+            </PrivateRoute>
+            <PrivateRoute exact path="/services/:id">
+              <Booking></Booking>
+            </PrivateRoute>
+            <Route exact path="/login">
+              <Login></Login>
+            </Route>
+            <PrivateRoute exact path="/myOrders">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute exact path="/manageOrders">
+              <ManageOrders></ManageOrders>
+            </PrivateRoute>
+            <Route exact path="/user">
+              <UserDetails></UserDetails>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

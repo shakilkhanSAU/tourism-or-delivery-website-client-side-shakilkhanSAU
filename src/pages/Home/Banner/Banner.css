@@ -1,0 +1,58 @@
+.hero {
+    position: relative; 
+    height: calc(100vh - 65px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./banner.jpg');
+    background-size: cover;
+}
+
+.hero::before {    
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 1;
+    /* background-color: #344b9159; */
+    background-image: linear-gradient(to right, #344b9152, rgba(109, 128, 168, 0.144));
+}
+
+.hero h1 {
+    text-align: left;
+    position: relative;
+    color: #ffffff;  
+    font-size: 4rem;
+    line-height: 3.1rem;
+    word-spacing: 0px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 4rem;
+}
+
+p {
+    text-align: left;
+    position: relative;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+.btn-banner {
+    position: relative;
+    padding: 8px 40px;
+    border: 3px solid #ff7f47;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #ff7f47;
+    color: #ffffff;
+    transition: .5s;
+}
+
+.btn-banner:hover {
+    background-color: white;
+    color: #ff7f47;
+}
