@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
+import useMyOrder from '../../../hooks/useMyOrder';
 import './MyOrders.css'
 
 
 const MyOrders = () => {
-    const { user } = useAuth();
-    const [orders, setOrders] = useState([]);
-    const email = user.email;
-
-    useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${email}`)
-            .then(res => res.json())
-            .then(data => {
-                setOrders(data)
-                console.log(orders)
-            })
-    }, [])
+    const { orders, setOrders } = useMyOrder();
 
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You Sure! Want to delete? ')
@@ -35,9 +23,6 @@ const MyOrders = () => {
                 })
         }
     }
-    const handleUpdateStatus = () => {
-
-    }
     return (
         <div className="container">
             <h2 className="fw-bold">My Orders</h2>
@@ -54,7 +39,6 @@ const MyOrders = () => {
                                         <p>{order.status}</p>
                                         <p>{order.description.slice(0, 90)}....</p>
                                         <button className="mb-2 me-2 btn-details" onClick={() => handleDelete(order._id)}>Delete</button>
-                                        <button onClick={handleUpdateStatus} className="btn-details">Update Status</button>
                                     </div>
                                 </Card.Body>
                             </div>

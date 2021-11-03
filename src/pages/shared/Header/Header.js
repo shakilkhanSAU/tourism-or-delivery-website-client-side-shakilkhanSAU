@@ -26,7 +26,7 @@ const Header = () => {
                         {
                             user?.email && <>
                                 <Nav.Link className="me-lg-2 fonts nav-link" as={Link} to="/myOrders">My Orders</Nav.Link>
-                                <Nav.Link className="me-lg-2 fonts nav-link" as={Link} to="/manageOrders">Manage Orders</Nav.Link>
+                                <Nav.Link className="me-lg-2 fonts nav-link" as={Link} to="/allOrders">Manage Orders</Nav.Link>
                                 <Nav.Link className="me-lg-2 fonts nav-link" as={Link} to="/add-tour">Add New Services</Nav.Link>
                             </>
                         }
