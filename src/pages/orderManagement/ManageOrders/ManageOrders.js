@@ -52,7 +52,7 @@ const ManageOrders = () => {
 
     return (
         <div className="container">
-            <h2>Manage Orders</h2>
+            <h2 className="fw-bold text-center pt-3 pb-2">Manage Orders</h2>
             <Col>
                 {
                     allOrders.map(order => <Row className="order-row">

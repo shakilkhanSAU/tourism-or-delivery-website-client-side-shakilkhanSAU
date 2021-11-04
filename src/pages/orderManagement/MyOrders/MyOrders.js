@@ -24,8 +24,8 @@ const MyOrders = () => {
         }
     }
     return (
-        <div className="container">
-            <h2 className="fw-bold">My Orders</h2>
+        <div className="container pb-5">
+            <h2 className="fw-bold text-center pt-3 pb-2">My Orders</h2>
             <Row xs={1} md={3} className="g-5">
                 {
                     orders.map(order =>
