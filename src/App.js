@@ -11,6 +11,8 @@ import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import UserDetails from './pages/UserDetails/UserDetails';
 import MyOrders from './pages/orderManagement/MyOrders/MyOrders';
 import ManageOrders from './pages/orderManagement/ManageOrders/ManageOrders';
+import ContactUs from './pages/ContactUs/ContactUs';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 
 function App() {
@@ -43,6 +45,12 @@ function App() {
             </PrivateRoute>
             <Route exact path="/user">
               <UserDetails></UserDetails>
+            </Route>
+            <Route exact path="/about">
+              <AboutUs></AboutUs>
+            </Route>
+            <Route exact path="/contact">
+              <ContactUs></ContactUs>
             </Route>
           </Switch>
           <Footer></Footer>

@@ -1,0 +1,47 @@
+.subscribe-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: rgb(228, 254, 255);
+    margin-bottom: -2px;
+
+}
+
+.subscribe h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+.subscribe-us button, input {
+    padding: 5px 20px;
+}
+
+.subscribe-us button {
+    background-color: #ff7f47;
+    border: 3px solid rgb(228, 254, 255);
+    transition: .5s;
+    font-weight: bold;
+    color: #fff;
+} 
+
+.subscribe-us button:hover {
+    border: 3px solid #ff7f47;
+    background-color: #fff;
+    color: #ff7f47;
+}
+
+.subscribe-us input {
+    border: 3px solid rgb(228, 254, 255);
+    background-color: blanchedalmond;
+    width: 40%;
+}
+
+.subscribe-us input:focus {
+    border: 3px solid #ff7f47;
+    outline: none;
+}

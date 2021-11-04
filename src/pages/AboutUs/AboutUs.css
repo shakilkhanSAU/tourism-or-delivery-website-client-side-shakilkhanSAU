@@ -1,0 +1,25 @@
+.about {
+    overflow-x: hidden;
+}
+
+.about h2 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.first {
+    background-color: #ffffff;
+    padding: 30px 8%;
+    margin: 0;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
