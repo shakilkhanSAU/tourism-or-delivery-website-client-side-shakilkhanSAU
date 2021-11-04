@@ -9,7 +9,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You Sure! Want to delete? ')
         if (proceed) {
-            const url = `http://localhost:5000/deleteProduct/${id}`;
+            const url = `https://warm-chamber-38340.herokuapp.com/deleteProduct/${id}`;
             fetch(url, {
                 method: "DELETE",
             })

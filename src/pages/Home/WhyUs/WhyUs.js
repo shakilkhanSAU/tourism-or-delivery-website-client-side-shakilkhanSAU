@@ -5,6 +5,7 @@ import './WhyUs.css'
 const WhyUs = () => {
     return (
         <div className="container why-us">
+            <hr />
             <p>Why TourX</p>
             <h2>Why You Are Travel With TourX</h2>
 

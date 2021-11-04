@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useProduct = () => {
     const [tours, setTours] = useState([])
-    const url = "http://localhost:5000/services"
+    const url = "https://warm-chamber-38340.herokuapp.com/services"
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

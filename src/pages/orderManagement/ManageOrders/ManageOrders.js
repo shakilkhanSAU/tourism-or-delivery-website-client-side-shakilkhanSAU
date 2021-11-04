@@ -5,7 +5,7 @@ const ManageOrders = () => {
     const { allOrders, setAllOrders } = useOrders();
 
     const handleUpdate = (id) => {
-        const url = `http://localhost:5000/updateOrder/${id}`;
+        const url = `https://warm-chamber-38340.herokuapp.com/updateOrder/${id}`;
         const findTour = allOrders.find(tour => tour._id === id);
         findTour.status = 'Approved'
         fetch(url, {
@@ -33,7 +33,7 @@ const ManageOrders = () => {
     }
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/deleteProduct/${id}`;
+        const url = `https://warm-chamber-38340.herokuapp.com/deleteProduct/${id}`;
         const proceed = window.confirm('Are You Sure! Want to delete? ')
         if (proceed) {
             fetch(url, {

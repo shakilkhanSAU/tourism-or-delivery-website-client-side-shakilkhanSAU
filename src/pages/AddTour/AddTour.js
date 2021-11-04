@@ -6,7 +6,7 @@ import './AddTour.css'
 const AddTour = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://warm-chamber-38340.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Tour Destination Added Successfully!")

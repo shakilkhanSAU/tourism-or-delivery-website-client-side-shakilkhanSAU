@@ -19,7 +19,7 @@ const Booking = () => {
         findTour.status = 'pending';
 
         if (!exist) {
-            fetch('http://localhost:5000/addOrder', {
+            fetch('https://warm-chamber-38340.herokuapp.com/addOrder', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
