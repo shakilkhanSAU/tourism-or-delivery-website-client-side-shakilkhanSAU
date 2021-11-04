@@ -13,6 +13,7 @@ import MyOrders from './pages/orderManagement/MyOrders/MyOrders';
 import ManageOrders from './pages/orderManagement/ManageOrders/ManageOrders';
 import ContactUs from './pages/ContactUs/ContactUs';
 import AboutUs from './pages/AboutUs/AboutUs';
+import NotFound from './pages/NotFound/NotFound';
 
 
 function App() {
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route exact path="/contact">
               <ContactUs></ContactUs>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>
