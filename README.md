@@ -12,3 +12,4 @@ In the project, you can find,
 5. There are also an option `Manage Orders` where admin can approve or cancel any order he/she like
 6. User also able contact with TourX in `Contact` Section
 7. Every loggin user can see WelCome message by `clicking` user logo on `right top corner`
+8. TourX also allow loggin user to add a new Service in `Add a New Service` section
