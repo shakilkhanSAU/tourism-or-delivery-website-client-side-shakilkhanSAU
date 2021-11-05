@@ -3,6 +3,9 @@ import { Col, Row } from 'react-bootstrap';
 import './ContactUs.css'
 
 const ContactUs = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
     return (
         <div className="contact-page">
             <div className="container">
@@ -10,7 +13,7 @@ const ContactUs = () => {
                     <Col xs={12} md={6}>
                         <h2 className="fw-bold">Contact Us</h2>
                         <div className="contact-form">
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <input type="text" placeholder="Enter Your Name" required />
                                 <br />
                                 <input type="email" placeholder="Enter Your Email" required id="" />

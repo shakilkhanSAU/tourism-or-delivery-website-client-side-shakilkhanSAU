@@ -12,8 +12,7 @@ const Booking = () => {
     const { tours } = useProduct();
     const { register, handleSubmit } = useForm();
     const findTour = tours.find(tour => tour._id === id);
-    const onSubmit = (data, e) => {
-        e.preventDefault();
+    const onSubmit = (data) => {
         const exist = orders.find(tour => tour._id === id)
         findTour.email = user.email;
         findTour.status = 'pending';
