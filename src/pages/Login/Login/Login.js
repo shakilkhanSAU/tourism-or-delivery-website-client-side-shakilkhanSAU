@@ -40,7 +40,7 @@ const Login = () => {
                             <img src={googleimg} alt="" />
                             Sign in with Google
                         </button>
-                        <p className="error-txt">{error}</p>
+                        <small className="error-txt text-danger">{error}</small>
                     </div>
                 </Col>
                 <Col sm={6}>

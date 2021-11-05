@@ -5,7 +5,6 @@ import './MyOrders.css'
 
 const MyOrders = () => {
     const { orders, setOrders } = useMyOrder();
-
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You Sure! Want to delete? ')
         if (proceed) {

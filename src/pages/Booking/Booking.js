@@ -12,12 +12,11 @@ const Booking = () => {
     const { tours } = useProduct();
     const { register, handleSubmit } = useForm();
     const findTour = tours.find(tour => tour._id === id);
-    const onSubmit = data => {
-        // console.log(data)
+    const onSubmit = (data, e) => {
+        e.preventDefault();
         const exist = orders.find(tour => tour._id === id)
         findTour.email = user.email;
         findTour.status = 'pending';
-
         if (!exist) {
             fetch('https://warm-chamber-38340.herokuapp.com/addOrder', {
                 method: "POST",
